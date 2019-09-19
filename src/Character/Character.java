@@ -8,6 +8,7 @@ package Character;
 import Builder.IBuilder;
 import Equipment.Equipment;
 import Prototype.IPrototype;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -17,7 +18,7 @@ import java.util.Random;
  */
 public class Character implements IPrototype{
     private String name;
-    private ArrayList<String> images;
+    private ArrayList<BufferedImage> images;
     private ArrayList<Equipment> equipments;
     private int hp;
     private int dps;
@@ -27,7 +28,7 @@ public class Character implements IPrototype{
     private int cost;
     private Equipment equiped;
 
-    public Character(String name, ArrayList<String> images, ArrayList<Equipment> equipments, int hp, int dps, int level, int space, int rarity, int cost, Equipment equiped) {
+    public Character(String name, ArrayList<BufferedImage> images, ArrayList<Equipment> equipments, int hp, int dps, int level, int space, int rarity, int cost, Equipment equiped) {
         this.name = name;
         this.images = images;
         this.equipments = equipments;
@@ -46,7 +47,7 @@ public class Character implements IPrototype{
         return name;
     }
 
-    public ArrayList<String> getImages() {
+    public ArrayList<BufferedImage> getImages() {
         return images;
     }
 
@@ -122,7 +123,7 @@ public class Character implements IPrototype{
     
     public class CharacterBuilder implements IBuilder{
         private String name;
-        private ArrayList<String> images = new ArrayList<>();
+        private ArrayList<BufferedImage> images = new ArrayList<>();
         private ArrayList<Equipment> equipments = new ArrayList<>();
         private int hp;
         private int dps;
@@ -137,8 +138,8 @@ public class Character implements IPrototype{
             return this;
         }
         
-        public CharacterBuilder addImage(String filePath){
-            this.images.add(filePath);
+        public CharacterBuilder addImage(BufferedImage image){
+            this.images.add(image);
             return this;
         }
         

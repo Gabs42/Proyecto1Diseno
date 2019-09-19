@@ -6,6 +6,7 @@
 package Factory;
 
 import Equipment.Equipment;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 /**
@@ -14,6 +15,6 @@ import java.util.ArrayList;
  */
 public interface IFactoryEquipment {
     
-    public Equipment createEquipment(Type type,String name,int range,int level,int damage,int area,ArrayList<String> images);
+    public Equipment createEquipment(Type type,String name,int range,int level,int damage,int area,ArrayList<BufferedImage> images);
     
 }

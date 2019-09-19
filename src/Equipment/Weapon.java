@@ -5,6 +5,7 @@
  */
 package Equipment;
 
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 /**
@@ -13,7 +14,7 @@ import java.util.ArrayList;
  */
 public class Weapon extends Equipment {
     
-    public Weapon(String name, int range, int level, int damage, int area, ArrayList<String> images) {
+    public Weapon(String name, int range, int level, int damage, int area, ArrayList<BufferedImage> images) {
         super(name, range, level, damage, area, images);
     }
     

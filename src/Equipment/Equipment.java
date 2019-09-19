@@ -6,6 +6,7 @@
 package Equipment;
 
 import Prototype.IPrototype;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 /**
@@ -18,9 +19,9 @@ public abstract class Equipment implements IPrototype {
     private int level;
     private int damage;
     private int area;
-    private ArrayList<String>images;
+    private ArrayList<BufferedImage>images;
 
-    public Equipment(String name, int range, int level, int damage, int area, ArrayList<String> images) {
+    public Equipment(String name, int range, int level, int damage, int area, ArrayList<BufferedImage> images) {
         this.name = name;
         this.range = range;
         this.level = level;
@@ -71,15 +72,15 @@ public abstract class Equipment implements IPrototype {
         this.area = area;
     }
 
-    public ArrayList<String> getImages() {
+    public ArrayList<BufferedImage> getImages() {
         return images;
     }
 
-    public void setImages(ArrayList<String> images) {
+    public void setImages(ArrayList<BufferedImage> images) {
         this.images = images;
     }
     
-    public void addImages(String image){
+    public void addImages(BufferedImage image){
         this.images.add(image);
     }
     

@@ -19,7 +19,7 @@ public class FactoryEquipment implements IFactoryEquipment {
    
     
     @Override
-    public Equipment createEquipment(Type type,String name,int range,int level,int damage,int area,ArrayList<BufferedImage> images){
+    public Equipment createEquipment(Type type,String name,int range,int level,int damage,int area,ArrayList<String> images){
         
         switch(type){
             case Power:
